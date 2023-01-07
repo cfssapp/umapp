@@ -16,7 +16,7 @@ export async function queryFoodList(
   options?: { [key: string]: any },
 ) {
   return request<API.Result_PageInfo_UserInfo__>(
-    'https://antapi.pythonanywhere.com/food_delivery/item/',
+    'https://antapi.pythonanywhere.com/shopee/',
     {
       method: 'GET',
       // params: {
