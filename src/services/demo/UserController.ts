@@ -19,10 +19,10 @@ export async function queryUserList(
     'https://antapi.pythonanywhere.com/djangobb/fake-data-01',
     {
       method: 'GET',
-      params: {
-        ...params,
-      },
-      ...(options || {}),
+      // params: {
+      //   ...params,
+      // },
+      // ...(options || {}),
     },
   );
 }
