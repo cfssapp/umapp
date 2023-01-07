@@ -34,6 +34,11 @@ export default defineConfig({
       path: '/table-02',
       component: './Table-02',
     },
+    {
+      name: ' Food Delivery',
+      path: '/food',
+      component: './Food_Delivery',
+    },
   ],
   npmClient: 'pnpm',
 });
