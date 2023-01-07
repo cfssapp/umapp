@@ -12,8 +12,8 @@ import React, { useRef, useState } from 'react';
 import CreateForm from './components/CreateForm';
 import UpdateForm, { FormValueType } from './components/UpdateForm';
 
-const { addUser, queryUserList, deleteUser, modifyUser } =
-  services.UserController;
+const { addUser2, queryUserList2, deleteUser2, modifyUser2 } =
+  services.UserController2;
 
 /**
  * 添加节点
@@ -22,7 +22,7 @@ const { addUser, queryUserList, deleteUser, modifyUser } =
 const handleAdd = async (fields: API.UserInfo) => {
   const hide = message.loading('正在添加');
   try {
-    await addUser({ ...fields });
+    await addUser2({ ...fields });
     hide();
     message.success('添加成功');
     return true;
@@ -40,7 +40,7 @@ const handleAdd = async (fields: API.UserInfo) => {
 const handleUpdate = async (fields: FormValueType) => {
   const hide = message.loading('正在配置');
   try {
-    await modifyUser(
+    await modifyUser2(
       {
         userId: fields.id || '',
       },
@@ -69,7 +69,7 @@ const handleRemove = async (selectedRows: API.UserInfo[]) => {
   const hide = message.loading('正在删除');
   if (!selectedRows) return true;
   try {
-    await deleteUser({
+    await deleteUser2({
       userId: selectedRows.find((row) => row.id)?.id || '',
     });
     hide();
@@ -162,7 +162,7 @@ const TableList: React.FC<unknown> = () => {
           </Button>,
         ]}
         request={async (params, sorter, filter) => {
-          const { data, success } = await queryUserList({
+          const { data, success } = await queryUserList2({
             ...params,
             // FIXME: remove @ts-ignore
             // @ts-ignore

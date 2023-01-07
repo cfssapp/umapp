@@ -3,7 +3,7 @@
 import { request } from '@umijs/max';
 
 /** 此处后端没有提供注释 GET /api/v1/queryUserList */
-export async function queryUserList(
+export async function queryUserList2(
   params: {
     // query
     /** keyword */
@@ -15,17 +15,20 @@ export async function queryUserList(
   },
   options?: { [key: string]: any },
 ) {
-  return request<API.Result_PageInfo_UserInfo__>('/api/v1/queryUserList', {
-    method: 'GET',
-    // params: {
-    //   ...params,
-    // },
-    // ...(options || {}),
-  });
+  return request<API.Result_PageInfo_UserInfo__>(
+    'https://antapi.pythonanywhere.com/djangobb/fake-data-01',
+    {
+      method: 'GET',
+      // params: {
+      //   ...params,
+      // },
+      // ...(options || {}),
+    },
+  );
 }
 
 /** 此处后端没有提供注释 POST /api/v1/user */
-export async function addUser(
+export async function addUser2(
   body?: API.UserInfoVO,
   options?: { [key: string]: any },
 ) {
@@ -40,7 +43,7 @@ export async function addUser(
 }
 
 /** 此处后端没有提供注释 GET /api/v1/user/${param0} */
-export async function getUserDetail(
+export async function getUserDetail2(
   params: {
     // path
     /** userId */
@@ -57,7 +60,7 @@ export async function getUserDetail(
 }
 
 /** 此处后端没有提供注释 PUT /api/v1/user/${param0} */
-export async function modifyUser(
+export async function modifyUser2(
   params: {
     // path
     /** userId */
@@ -79,7 +82,7 @@ export async function modifyUser(
 }
 
 /** 此处后端没有提供注释 DELETE /api/v1/user/${param0} */
-export async function deleteUser(
+export async function deleteUser2(
   params: {
     // path
     /** userId */
