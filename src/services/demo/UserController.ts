@@ -15,13 +15,16 @@ export async function queryUserList(
   },
   options?: { [key: string]: any },
 ) {
-  return request<API.Result_PageInfo_UserInfo__>('/api/v1/queryUserList', {
-    method: 'GET',
-    params: {
-      ...params,
+  return request<API.Result_PageInfo_UserInfo__>(
+    'https://antapi.pythonanywhere.com/djangobb/fake-data-01',
+    {
+      method: 'GET',
+      params: {
+        ...params,
+      },
+      ...(options || {}),
     },
-    ...(options || {}),
-  });
+  );
 }
 
 /** 此处后端没有提供注释 POST /api/v1/user */
