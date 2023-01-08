@@ -177,7 +177,7 @@ const TableList: React.FC<unknown> = () => {
           });
           return {
             // data: data?.list || [],
-            data: [data?.list] || [],
+            data: data?.list || [],
             success,
           };
         }}
