@@ -111,6 +111,11 @@ const TableList: React.FC<unknown> = () => {
     //   hideInSearch: true,
     // },
     {
+      title: 'Name',
+      dataIndex: 'product_name',
+      hideInSearch: true,
+    },
+    {
       title: 'Price',
       dataIndex: 'product_price',
       hideInSearch: true,
