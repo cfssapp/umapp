@@ -7,7 +7,7 @@ import {
   ProDescriptionsItemProps,
   ProTable,
 } from '@ant-design/pro-components';
-import { Space, Button, Divider, Drawer, message } from 'antd';
+import { Button, Divider, Drawer, message } from 'antd';
 import React, { useRef, useState } from 'react';
 import CreateForm from './components/CreateForm';
 import UpdateForm, { FormValueType } from './components/UpdateForm';
@@ -97,19 +97,19 @@ const TableList: React.FC<unknown> = () => {
       valueType: 'indexBorder',
       // width: 48,
     },
-    {
-      dataIndex: ['avatar', 'imagefile'],
-      title: 'Name',
-      valueType: 'avatar',
-      // width: 150,
-      render: (dom, record) => (
-        <Space>
-          <span>{dom}</span>
-          {record.name}
-        </Space>
-      ),
-      hideInSearch: true,
-    },
+    // {
+    //   dataIndex: ['avatar', 'imagefile'],
+    //   title: 'Name',
+    //   valueType: 'avatar',
+    //   // width: 150,
+    //   render: (dom, record) => (
+    //     <Space>
+    //       <span>{dom}</span>
+    //       {record.name}
+    //     </Space>
+    //   ),
+    //   hideInSearch: true,
+    // },
     {
       title: 'Price',
       dataIndex: 'product_price',
