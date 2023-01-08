@@ -112,12 +112,12 @@ const TableList: React.FC<unknown> = () => {
     },
     {
       title: 'Price',
-      dataIndex: 'price',
+      dataIndex: 'product_price',
       hideInSearch: true,
     },
     {
       title: 'Category',
-      dataIndex: 'category',
+      dataIndex: 'product_category',
       valueEnum: {
         Burgers: { text: 'Burgers' },
         Beverages: { text: 'Beverages' },
